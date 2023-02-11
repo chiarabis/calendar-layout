@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url('font/Poppins/Poppins-Light.ttf');
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar{
+    font-family: 'Poppins';
+    display: inline-block;
+    justify-content: center;
+    background-color: #0a7273;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 40px 30px -20px rgba(0, 0, 0, 0.6);
+}
+
+.month {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+    letter-spacing: 3px;
+    font-weight: 200;
+}
+
+.arrow{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .2s;
+    position:relative;
+}
+
+.weekdays{
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #fda521;
+    color: #b65303;
+    font-weight: 600;
+    padding: 10px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.weekdays span{
+    width: 50px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+.days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px;
+    background-color: #e9e3d5;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+#jan_first{
+    grid-column-start: 7;
+}
+#feb_first{
+    grid-column-start: 3;
+}
+
+.days button{
+    color: #323232;
+    background-color: #e9e3d5;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 15px;
+    justify-self: center;
+    align-self: center;
+    border-radius: 50px;
+    transition-duration: .2s;
+    width: 50px;
+    height: 50px;
+}
+
+#mybirthday{
+    background-color: #323232;
+    color: white;
+}
+   
+.today{
+    box-shadow: inset 0 0 0 2px #fda521;
+}
+
+button:first-child{grid-column: 7;}
+button:hover{background-color: white;}
+button:focus{
+    background-color: #fda521;
+    color: white;
+}
